@@ -1,3 +1,10 @@
+
+@mixin google-font($font) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css?family=#{$font});
+
+}
+
 @mixin warning {
     background-color: orange;
     color: #fff;
@@ -5,6 +12,11 @@
 
 @mixin linavbar {
         padding: 0 15px;
+}
+@mixin apply-to-ie-6{
+    * html {
+        @content;
+    }
 }
 @mixin box-shadow($shadows...) {
     box-shadow: $shadows;

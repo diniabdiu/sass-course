@@ -1,5 +1,9 @@
-@import "variables";
-@import "mixins";
+@import "partials/variables";
+@import "partials/mixins";
+
+   
+@include google-font("Alegreya+Sans");
+@include google-font("Titillium+Web");
 
 @include fancy-links;
 
@@ -28,6 +32,11 @@ a {
   padding: 8px;
 }
 
+@include apply-to-ie-6 {
+body {
+    font-size: 125%;
+  }
+}
 #header {
   @include box($border: 1px solid #fff, $radius: 12px);
   @include box-shadow(2px 0px 4px #ff0000, 1px 1px 6px $secondary-color);
@@ -46,20 +55,20 @@ a {
 
   }
   
-  #logo {
+  // #logo {
 
-  }
+  // }
 }
 
 #main {
   width: $content-width;
   margin-left: auto;
   margin-right: auto;
-  #content {
-  }
+  // #content {
+  // }
 
-  #sidebar {
-  }
+  // #sidebar {
+  // }
 }
 
 #footer {
