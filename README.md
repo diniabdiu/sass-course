@@ -1,2 +1,2 @@
-# sass-courses
+# Sass Course
 course exercises
