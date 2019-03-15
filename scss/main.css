@@ -5,7 +5,11 @@ a {
   text-decoration: none;
 }
 
-.error, .critical-error {
+* html body {
+  font-size: 125%;
+}
+
+.error, .critical-error, .cta-button, .super-cta-button {
   color: red;
 }
 
@@ -15,8 +19,16 @@ a {
 }
 
 body {
-  font-family: sans-serif;
-  color: #222222;
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  font-size: 1.125em;
+  color: #999;
+}
+
+body {
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  font-size: 1.125em;
+  color: #999;
+  background-color: #22222a;
 }
 
 @media only screen and (max-width: 960px) {
@@ -35,52 +47,62 @@ h2 {
 }
 
 p {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
 }
 
 a {
-  color: #f27731;
+  color: #c24721;
 }
 
 a:hover {
-  color: #ca510d;
+  color: #812f16;
 }
 
-.warning-button, .cta-button, .super-cta-button {
+.sub-title {
+  font-style: italic;
+}
+
+.sub-title {
+  font-size: 1.25em;
+}
+
+.warning-button {
   background-color: orange;
   color: #fff;
-  padding: 8px;
+  padding: 8px 12px;
 }
 
-.warning-button:hover, .cta-button:hover, .super-cta-button:hover {
+.warning-button:hover {
   background-color: #ffc04d;
 }
 
 .cta-button, .super-cta-button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px;
   border-radius: 6px;
   font-weight: bold;
+}
+
+.cta-button:hover, .super-cta-button:hover {
+  background-color: #ffc04d;
 }
 
 .super-cta-button {
   font-size: 1.25em;
 }
 
-* html body {
-  font-size: 125%;
-}
-
 #header {
   border-radius: 12px;
   border: 1px solid #fff;
-  box-shadow: 2px 0px 4px #ff0000, 1px 1px 6px #f27731;
-  -moz-box-shadow: 2px 0px 4px #ff0000, 1px 1px 6px #f27731;
-  -webkit-box-shadow: 2px 0px 4px #ff0000, 1px 1px 6px #f27731;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #c24721;
   height: 60px;
-  background-color: #170a48;
+  background-color: #42424a;
 }
 
 #header #main-menu li {
-  padding: 0 15px;
   display: inline;
 }
 
@@ -113,11 +135,12 @@ a:hover {
 
 #main #content {
   float: left;
-  width: 5760px;
+  width: 69.75%;
 }
 
 #main #sidebar {
   float: right;
+  width: 23.25%;
 }
 
 #main #sidebar li {
@@ -131,7 +154,8 @@ a:hover {
 }
 
 #footer {
+  clear: both;
   height: 90px;
-  background-color: #ccf962;
+  background-color: #698932;
 }
 /*# sourceMappingURL=main.css.map */
