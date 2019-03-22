@@ -9,10 +9,19 @@ a {
   font-size: 125%;
 }
 
+.error, .critical-error, .cta-button, .super-cta-button {
+  color: red;
+}
+
+.critical-error {
+  bottom: 1px solid red;
+  font-weight: bold;
+}
+
 body {
   font-family: "Alegreya Sans", Arial, sans-serif;
-  color: #222222;
   font-size: 1.125em;
+  color: #222222;
 }
 
 @media only screen and (max-width: 960px) {
@@ -42,6 +51,14 @@ a:hover {
   color: #ca510d;
 }
 
+.sub-title {
+  font-style: italic;
+}
+
+.sub-title {
+  font-size: 1.25em;
+}
+
 .warning-button {
   background-color: orange;
   color: #fff;
@@ -50,6 +67,22 @@ a:hover {
 
 .warning-button:hover {
   background-color: #ffb733;
+}
+
+.cta-button, .super-cta-button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.cta-button:hover, .super-cta-button:hover {
+  background-color: #ffb733;
+}
+
+.super-cta-button {
+  font-size: 1.25em;
 }
 
 #header {
@@ -70,10 +103,10 @@ a:hover {
   color: white;
   padding: 6px 8px;
   border-bottom: 1px solid rgba(254, 254, 254, 0);
+  -webkit-transition: border-bottom 0.5s;
+  transition: border-bottom 0.5s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-  -webkit-transition: border-bottom .5s;
-  transition: border-bottom .5s;
 }
 
 #header #main-menu a:hover {
@@ -93,7 +126,28 @@ a:hover {
   }
 }
 
+#main #content {
+  float: left;
+  width: 69.75%;
+}
+
+#main #sidebar {
+  float: right;
+  width: 23.25%;
+}
+
+#main #sidebar li {
+  list-style-type: none;
+  padding: 1em 1.25em;
+  border-bottom: 1px dashed #999;
+}
+
+#main #sidebar li:hover {
+  background-color: #efefef;
+}
+
 #footer {
+  clear: both;
   height: 90px;
   background-color: #ccf962;
 }
