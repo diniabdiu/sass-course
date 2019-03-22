@@ -2,7 +2,11 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-
+@for $i from 1 through 6 {
+  .col-#{$i} {
+    width: $i * 2em;
+  }
+}
 
 @include google-font("Alegreya+Sans");
 @include google-font("Titillium+Web");
@@ -26,19 +30,11 @@
 }
 
 
-$contrast: normal;
 body {
-
   font-family: $text-font;
   font-size: em(18px);
-
-  @if $contrast == high {
-    color: #000;
-  } @else if $contrast == low {
-    color: #999;
-  } @else {
-    color: $text-color;
-  }
+  color: $text-color;
+  background-color: $body-background-color;
 
   @include large-screens {
     font-size: 125%;
@@ -59,6 +55,9 @@ p {
 
 a {
   color: $link-color;
+  @include blue-beans {
+    color: #8779ff;
+  }
 
   &:hover {
     color: darken($link-color, 15%);
@@ -161,4 +160,8 @@ a {
   clear: both;
   height: $footer-height;
   background-color: $ternary-color;
+
+  @include rogers-rovers {
+    border-top: 5px solid darken($ternary-color, 15%);
+  }
 }
